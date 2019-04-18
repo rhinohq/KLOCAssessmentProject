@@ -1,0 +1,86 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model KLOCAssessmentProject.Models.CustomersViewModel
+@{
+    ViewData["Title"] = "Customer Data";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Address1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Address2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Town)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customers[0].Postcode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model.Customers)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelCust => customer.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.County)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCust => customer.Postcode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@customer.CustomerID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@customer.CustomerID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@customer.CustomerID">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

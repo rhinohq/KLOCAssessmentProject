@@ -1,0 +1,70 @@
+﻿@model KLOCAssessmentProject.Models.Customer
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Details</h1>
+<div>
+    <h4>Customer: @Model.FirstName @Model.LastName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Town)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Town)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.County)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Postcode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Postcode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CustomerID">Edit</a> |
+    <a asp-action="Delete" asp-route-id="@Model.CustomerID">Delete</a> |
+    <a asp-action="Customers">Back to Customers</a>
+</div>
